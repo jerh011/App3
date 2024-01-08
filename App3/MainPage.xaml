@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.MainPage">
+    <ScrollView>
+              <StackLayout>
+          
+
+                <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                    <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                </Frame>
+                <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+              
+                  <!--CUADRO-->
+            
+                  <BoxView Color="Accent"
+                     WidthRequest="150"
+                     HeightRequest="150"
+                     HorizontalOptions="Center"/>
+
+                  <!--Ellipse-->
+                  <Ellipse Fill="Red" 
+                    WidthRequest="150"
+                    HeightRequest="50"
+                    HorizontalOptions="Center" />
+
+                  <!--LINE-->
+                  <Line X1="40"
+                         Y1="0"
+                         X2="0"
+                         Y2="120"
+                         Stroke="Red"
+                         HorizontalOptions="Center"/>
+
+                   <!-- RUTA DE ACCESO-->
+            
+                  <Path Stroke="Black"
+                        Aspect="Uniform"
+                        HorizontalOptions="Center"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        Data="M13.9,16.2
+                        L32,16.2 32,31.9 13.9,30.1Z
+                        M0,16.2
+                        L11.9,16.2 11.9,29.9 0,28.6Z
+                        M11.9,2
+                        L11.9,14.2 0,14.2 0,3.3Z
+                        M32,0
+                        L32,14.2 13.9,14.2 13.9,1.8Z" />
+                  
+                  <!-- Polygon-->
+                  
+           
+                  <Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96,
+                           50 96, 48 192, 150 200 144 48"
+                           Fill="Blue"
+                           Stroke="Red" 
+                           StrokeThickness="3"
+                           HorizontalOptions="Center" />
+
+                  <!--Polilínea-->
+                
+                  <Polyline  Points="0,0 10,30, 15,0 18,60 23,30 35,30 40,0
+                          43,60 48,30 100,30"
+                          Stroke="Red"
+                          HorizontalOptions="Center" />
+
+          
+                  <!--Rectangulo-->
+            
+                  <Rectangle Fill="Red"
+                             WidthRequest="150"
+                             HeightRequest="50"
+                             HorizontalOptions="Center" />
+
+                  <!--WebView-->
+                  <WebView Source="https://learn.microsoft.com/xamarin/"
+                           VerticalOptions="FillAndExpand" />
+
+            <!--RadioButton-->
+            
+                  <RadioButton Content="Piña"
+                              />
+                        
+                  
+                   <!-- Barra de búsqueda-->
+                <SearchBar Placeholder="Enter search term"/>
+
+                  
+                  
+                   <!--SwipeView-->
+
+            <SwipeView>
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="Delete"
+                                         IconImageSource="delete.png"
+                                         BackgroundColor="LightPink"
+                                         />
+                    
+                          </SwipeItems>
+                
+                    </SwipeView.LeftItems>
+                <!--Contenido-->
+            
+                  </SwipeView>
+
+            <!--CheckBox-->
+            <CheckBox IsChecked="true"
+                      HorizontalOptions="Center"
+                      VerticalOptions="CenterAndExpand" />
+
+
+            <!--control deslizante-->
+                    <Slider Minimum="0"
+                            Maximum="100"
+                            VerticalOptions="CenterAndExpand"/>
+           
+                    <!--Control de incremento-->
+            <Stepper Minimum="0"
+                     Maximum="10"
+                     Increment="0.1"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand" />
+                    
+                    <!--switch-->
+                    <Switch IsToggled="false"
+                            HorizontalOptions="Center"
+                            VerticalOptions="CenterAndExpand" />
+
+        </StackLayout>
+        
+        </ScrollView>
+</ContentPage>
