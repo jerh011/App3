@@ -1,135 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.MainPage">
-    <ScrollView>
-              <StackLayout>
-          
+             x:Class="Practica_3.MainPage">
 
-                <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                    <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-                </Frame>
-                <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-              
-                  <!--CUADRO-->
-            
-                  <BoxView Color="Accent"
-                     WidthRequest="150"
-                     HeightRequest="150"
-                     HorizontalOptions="Center"/>
+    
+      <StackLayout BackgroundColor="White" Margin="10" >
 
-                  <!--Ellipse-->
-                  <Ellipse Fill="Red" 
-                    WidthRequest="150"
-                    HeightRequest="50"
-                    HorizontalOptions="Center" />
+            <Frame BackgroundColor="White" Padding="24" CornerRadius="0" >
 
-                  <!--LINE-->
-                  <Line X1="40"
-                         Y1="0"
-                         X2="0"
-                         Y2="120"
-                         Stroke="Red"
-                         HorizontalOptions="Center"/>
+                <Label Text="ACTIVIDAD: CRITICOGRAFO" HorizontalTextAlignment="Center"  TextColor="Black" FontSize="20"/>
 
-                   <!-- RUTA DE ACCESO-->
-            
-                  <Path Stroke="Black"
-                        Aspect="Uniform"
-                        HorizontalOptions="Center"
-                        HeightRequest="100"
-                        WidthRequest="100"
-                        Data="M13.9,16.2
-                        L32,16.2 32,31.9 13.9,30.1Z
-                        M0,16.2
-                        L11.9,16.2 11.9,29.9 0,28.6Z
-                        M11.9,2
-                        L11.9,14.2 0,14.2 0,3.3Z
-                        M32,0
-                        L32,14.2 13.9,14.2 13.9,1.8Z" />
-                  
-                  <!-- Polygon-->
-                  
+            </Frame>
+
            
-                  <Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96,
-                           50 96, 48 192, 150 200 144 48"
-                           Fill="Blue"
-                           Stroke="Red" 
-                           StrokeThickness="3"
-                           HorizontalOptions="Center" />
-
-                  <!--Polilínea-->
-                
-                  <Polyline  Points="0,0 10,30, 15,0 18,60 23,30 35,30 40,0
-                          43,60 48,30 100,30"
-                          Stroke="Red"
-                          HorizontalOptions="Center" />
-
+            <Label Text="NOMBRE:" FontSize="20"/>
+            <Entry Placeholder="Nombre"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   x:Name="Entry_Nombre"/>
+            
+            <Label Text="GENERO:" FontSize="20"/>
+            
+            <Grid Padding="0,0,0,80" >
+                <RadioButton  Grid.Column="0" Grid.Row="0" Content="Hombre" x:Name="Radio_Hombre" IsChecked="True"/>
+            <RadioButton Grid.Column="1" Grid.Row="0" Content="Mujer" x:Name="Radio_Mujer" />
+            </Grid>
           
-                  <!--Rectangulo-->
-            
-                  <Rectangle Fill="Red"
-                             WidthRequest="150"
-                             HeightRequest="50"
-                             HorizontalOptions="Center" />
+            <Grid>
 
-                  <!--WebView-->
-                  <WebView Source="https://learn.microsoft.com/xamarin/"
-                           VerticalOptions="FillAndExpand" />
+            <CheckBox Grid.Row="0" Grid.Column="0" Margin="0,-10,0,0" x:Name="Box_Alto"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="ALTO" Margin="-60,0,0,0"/>
 
-            <!--RadioButton-->
-            
-                  <RadioButton Content="Piña"
-                              />
-                        
-                  
-                   <!-- Barra de búsqueda-->
-                <SearchBar Placeholder="Enter search term"/>
+                <CheckBox Grid.Row="0" Grid.Column="2"  Margin="0,-10,0,0" x:Name="Box_Feo"/>
+                <Label Grid.Row="0" Grid.Column="3" Text="FEO" Margin="-60,0,0,0"/>
 
-                  
-                  
-                   <!--SwipeView-->
+                <CheckBox Grid.Row="1" Grid.Column="0" Margin="0,-10,0,0" x:Name="Box_Listo"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="LISTO" Margin="-60,0,0,0"/>
 
-            <SwipeView>
-                <SwipeView.LeftItems>
-                    <SwipeItems>
-                        <SwipeItem Text="Delete"
-                                         IconImageSource="delete.png"
-                                         BackgroundColor="LightPink"
-                                         />
-                    
-                          </SwipeItems>
-                
-                    </SwipeView.LeftItems>
-                <!--Contenido-->
-            
-                  </SwipeView>
+                <CheckBox Grid.Row="1" Grid.Column="2" Margin="0,-10,0,0" x:Name="Box_Extravagante"/>
+                <Label Grid.Row="1" Grid.Column="3" Text="EXTRAVAGANTE" Margin="-60,0,0,0"/>
 
-            <!--CheckBox-->
-            <CheckBox IsChecked="true"
-                      HorizontalOptions="Center"
-                      VerticalOptions="CenterAndExpand" />
+                <CheckBox Grid.Row="2" Grid.Column="0" Margin="0,-10,0,0" x:Name="Box_Raro"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="RARO" Margin="-60,0,0,0"/>
 
+                <CheckBox Grid.Row="2" Grid.Column="2" Margin="0,-10,0,0" x:Name="Box_Grande"/>
+                <Label Grid.Row="2" Grid.Column="3" Text="GRANDE" Margin="-60,0,0,0"/>
 
-            <!--control deslizante-->
-                    <Slider Minimum="0"
-                            Maximum="100"
-                            VerticalOptions="CenterAndExpand"/>
-           
-                    <!--Control de incremento-->
-            <Stepper Minimum="0"
-                     Maximum="10"
-                     Increment="0.1"
-                     HorizontalOptions="Center"
-                     VerticalOptions="CenterAndExpand" />
-                    
-                    <!--switch-->
-                    <Switch IsToggled="false"
-                            HorizontalOptions="Center"
-                            VerticalOptions="CenterAndExpand" />
+            </Grid>
+
+        <Button Text="Criticar" FontSize="40" Margin="0,20,0,50" Clicked="Criticar"/>
+
+            <Label  Margin="0,60"  x:Name="Critica" TextColor="Black" Padding="10" FontSize="30"/>
 
         </StackLayout>
         
-        </ScrollView>
+   
+
 </ContentPage>
